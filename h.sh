@@ -145,7 +145,7 @@ Check the content of your H_COLORS_FG and H_COLORS_BG environment variables or u
     for keyword in "$@"
     do
         local _COMMAND=$_COMMAND"$ACK $_OPTS --noenv --flush --passthru --color --color-match=\"${_COLORS[$_i]}\" '$keyword' |"
-        _i=$_i+1
+        _i=$((_i+1))
     done
     #trim ending pipe
     _COMMAND=${_COMMAND%?}
